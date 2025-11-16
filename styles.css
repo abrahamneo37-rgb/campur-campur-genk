@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #e0f7fa, #b2ebf2);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.unsur-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.unsur {
+  background-color: #80deea;
+  border: 2px solid #006064;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: grab;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.unsur:hover {
+  transform: scale(1.1);
+  background-color: #4dd0e1;
+}
+
+.tabung-reaksi {
+  width: 250px;
+  height: 150px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+  border: 3px dashed #00796b;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.hasil-reaksi {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #004d40;
+}
