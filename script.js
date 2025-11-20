@@ -39,7 +39,36 @@ const reaksi = [
       { nama: "CO (Karbon Monoksida)", json: "funFactCard/co.json" }
     ]
   },
-  { gabungan: ["C", "H", "O"], hasil: [{ nama: "C6H12O6 (Gula)", json: "funFactCard/gula.json" }] }
+  { gabungan: ["C", "H", "O"], hasil: [
+    { nama: "C6H12O6 (Gula)", json: "funFactCard/gula.json" }
+  ]
+  },
+  { gabungan: ["C", "H", "O"], hasil: [
+    { nama: "C6H12O6 (Gula)", json: "funFactCard/gula.json" },
+    { nama: "H₂CO₃ (Asam Karbonat)", json: "funFactCard/h2co3.json" },
+    { nama: "C₂H₅OH (Etanol)", json: "funFactCard/etanol.json" }
+  ]
+  },
+  { gabungan: ["Na", "H", "O"], hasil: [
+    { nama: "NaOH (Natrium Hidroksida)", json: "funFactCard/naoh.json" }
+  ]
+  },
+  { gabungan: ["Na", "Cl", "O"], hasil: [
+    { nama: "NaOCl (Natrium Hipoklorit)", json: "funFactCard/naocl.json" }
+  ]
+  },
+  { gabungan: ["C", "Na", "O"], hasil: [
+    { nama: "Na₂CO₃ (Natrium Karbonat)", json: "funFactCard/na2co3.json" }
+  ]
+  },
+  { gabungan: ["C", "H", "Cl"], hasil: [
+    { nama: "CHCl₃ (Kloroform)", json: "funFactCard/chcl3.json" }
+  ]
+  },
+  { gabungan: ["C", "Cl", "O"], hasil: [
+    { nama: "COCl₂ (Fosgen)", json: "funFactCard/cocl2.json" }
+  ]
+  }
 ];
 
 // Memuat unsur ke tampilan
