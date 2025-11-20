@@ -8,7 +8,30 @@ const reaksi = [
       { nama: "H₂O₂ (Hidrogen Peroksida)", json: "funFactCard/h2o2.json" }
     ]
   },
-  { gabungan: ["Na", "Cl"], hasil: [{ nama: "NaCl (Garam Dapur)", json: "funFactCard/nacl.json" }] },
+  {
+    gabungan: ["H", "Cl"],
+    hasil: [
+      { nama: "HCl (Asam Klorida)", json: "funFactCard/hcl.json" }
+    ]
+  },
+  {
+    gabungan: ["C", "H"],
+    hasil: [
+      { nama: "CH₄ (Metana)", json: "funFactCard/ch4.json" }
+    ]
+  },
+  {
+    gabungan: ["C", "Cl"],
+    hasil: [
+      { nama: "CCl₄ (Karbon Tetraklorida)", json: "funFactCard/ccl4.json" }
+    ]
+  },
+  {
+    gabungan: ["Na", "Cl"],
+    hasil: [
+      { nama: "NaCl (Garam Dapur)", json: "funFactCard/garam.json" }
+    ]
+  },
   {
     gabungan: ["C", "O"],
     hasil: [

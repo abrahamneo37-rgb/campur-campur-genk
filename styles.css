@@ -67,13 +67,16 @@ body {
   transform: translate(-50%, -50%);
   width: 300px;
   max-width: 90%;
+  max-height: 80vh;
   background: linear-gradient(#ffffff, #00e9ff);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   padding: 20px;
   z-index: 1000;
   text-align: center;
+  overflow-y: auto;
 }
+
 .hasilBtn {
   background-color: #00e9ff
 }
