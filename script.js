@@ -40,10 +40,6 @@ const reaksi = [
     ]
   },
   { gabungan: ["C", "H", "O"], hasil: [
-    { nama: "C6H12O6 (Gula)", json: "funFactCard/gula.json" }
-  ]
-  },
-  { gabungan: ["C", "H", "O"], hasil: [
     { nama: "C6H12O6 (Gula)", json: "funFactCard/gula.json" },
     { nama: "H₂CO₃ (Asam Karbonat)", json: "funFactCard/h2co3.json" },
     { nama: "C₂H₅OH (Etanol)", json: "funFactCard/etanol.json" }
