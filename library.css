@@ -1,0 +1,163 @@
+/* GLOBAL -------------------------------------------------- */
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(Asset/background.jpg) no-repeat center center;
+  background-size: cover;
+  filter: blur(8px); /* blur di sini */
+  z-index: -1; /* taruh di belakang */
+}
+
+/* Judul -------------------------------------------------- */
+
+.judul-library {
+  text-align: center;
+  margin-top: 20px;
+  color: #b8caff;
+  text-shadow: 0 0 10px #374bff;
+  font-size: 26px;
+}
+
+
+/* CONTAINER UTAMA ---------------------------------------- */
+
+.library-container {
+  display: flex;
+  gap: 20px;
+
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+
+/* PANEL KIRI (LIST) -------------------------------------- */
+
+.library-list {
+  width: 30%;
+  background: rgba(40, 40, 75, 0.35);
+  backdrop-filter: blur(6px);
+
+  border-radius: 12px;
+  padding: 15px;
+
+  box-shadow: 0 0 12px rgba(80, 110, 255, 0.2);
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+/* Styling tombol list */
+.lib-item {
+  display: block;
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(90deg, #394088, #2a2f66);
+  border: none;
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+
+  color: #dbe1ff;
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+.lib-item:hover {
+  background: linear-gradient(90deg, #5862e8, #3942b9);
+  transform: translateX(3px);
+}
+
+.lib-item:active {
+  transform: scale(0.98);
+}
+
+
+/* PANEL KANAN (DETAIL) ----------------------------------- */
+
+.library-detail {
+  width: 70%;
+  background: rgba(30, 30, 55, 0.4);
+  backdrop-filter: blur(6px);
+
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 0 12px rgba(80, 110, 255, 0.25);
+
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.library-detail h2 {
+  color: #9fb4ff;
+  text-shadow: 0 0 6px #3d57ff;
+}
+
+.library-detail p {
+  line-height: 1.6;
+  text-align: justify;
+  color: #dfe3ff;
+}
+
+/* Gambar dalam detail */
+.lib-img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+
+  box-shadow: 0 0 12px rgba(130, 150, 255, 0.5);
+}
+
+/* TOMBOL KEMBALI ---------------------------------------- */
+
+.backBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(45deg, #5a64ff, #9d46ff);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
+
+  transition: 0.2s ease;
+  z-index: 1000;
+}
+
+.backBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.backBtn:active {
+  transform: scale(0.95);
+}

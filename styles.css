@@ -1,10 +1,57 @@
+#libraryBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(45deg, #8cff4d, #7cffb2);
+  color: #020202;
+  font-weight: bold;
+  font-size: 14px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  transition: 0.2s ease;
+  z-index: 2000;
+}
+
+#libraryBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#libraryBtn:active {
+  transform: scale(0.95);
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: radial-gradient(#e0f7fa, #b2ebf2);
-  text-align: center;
+  font-weight: bold;
+  color: white;
   margin: 0;
   padding: 0;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(Asset/background.jpg) no-repeat center center;
+  background-size: cover;
+  filter: blur(8px); /* blur di sini */
+  z-index: -1; /* taruh di belakang */
+}
+
 
 .container {
   padding: 20px;
@@ -19,8 +66,8 @@ body {
 }
 
 .unsur {
-  background-color: #80deea;
-  border: 2px solid #006064;
+  background-color: #0da3b6;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 10px 15px;
   cursor: grab;
@@ -30,7 +77,7 @@ body {
 
 .unsur:hover {
   transform: scale(1.1);
-  background-color: #4dd0e1;
+  background-color: #00b1c8;
 }
 
 .tabung-reaksi-container {
@@ -43,21 +90,22 @@ body {
 .slot {
   width: 80px;
   height: 80px;
-  border: 2px dashed #00796b;
+  border: 2px dashed #ffffff;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background-color: #f5f5f5;
+  background-color: #007576;
 }
 .campurBtn {
   width: 80px;
   height: 40px;
+  border: 2px solid #ffffff;
   border-radius: 10px;
-  color: #000000;
+  color: #ffffff;
   font-weight: bold;
-  background: radial-gradient(circle , #4dd0e1, #b3f6ff);
+  background: radial-gradient(circle , #0b8797, #00acc3);
 }
 .funfact-card {
   display: none; /* awalnya tersembunyi */
