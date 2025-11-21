@@ -1,4 +1,9 @@
 const listZat = [
+  { id: "h", nama: "H (Hidrogen)" },
+  { id: "o", nama: "O (Oksigen)" },
+  { id: "na", nama: "Na (Natrium)" },
+  { id: "cl", nama: "Cl (Klorin)" },
+  { id: "c", nama: "C (Karbon)" },
   { id: "h2o", nama: "H₂O (Air)" },
   { id: "h2o2", nama: "H₂O₂ (Hidrogen Peroksida)" },
   { id: "garam", nama: "NaCl (Garam Dapur)" },
