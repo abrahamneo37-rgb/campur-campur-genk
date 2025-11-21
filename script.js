@@ -71,8 +71,10 @@ const reaksi = [
 const unsurContainer = document.querySelector(".unsur-list");
 unsurList.forEach((u) => {
   const div = document.createElement("div");
-  div.className = "unsur";
-  div.textContent = u;
+div.className = "unsur";
+div.textContent = u;
+div.setAttribute("data-unsur", u);
+
 
   // 1️⃣ Drag untuk desktop
   div.draggable = true;
@@ -82,9 +84,11 @@ unsurList.forEach((u) => {
   div.addEventListener("click", () => {
     const index = slots.findIndex((s) => s === "");
     if (index !== -1) {
-      slots[index] = u;
-      document.getElementById(`slot${index + 1}`).textContent = u;
-    }
+  slots[index] = u;
+  document.getElementById(`slot${index + 1}`).textContent = u;
+  disableUnsur(u); // 🔥
+}
+
   });
 
   unsurContainer.appendChild(div);
@@ -102,6 +106,23 @@ function dragStart(e) {
 
 let slots = ["", "", ""]; // 3 slot kosong
 
+function disableUnsur(u) {
+  const el = document.querySelector(`[data-unsur='${u}']`);
+  el.classList.add("disabled");
+  el.style.opacity = "0.4";
+  el.style.pointerEvents = "none";
+}
+
+function enableSemuaUnsur() {
+  document.querySelectorAll(".unsur").forEach((el) => {
+    el.classList.remove("disabled");
+    el.style.opacity = "1";
+    el.style.pointerEvents = "auto";
+  });
+}
+
+
+
 function dropUnsur(e) {
   e.preventDefault();
   const unsur = e.dataTransfer.getData("unsur");
@@ -110,8 +131,11 @@ function dropUnsur(e) {
   if (index !== -1) {
     slots[index] = unsur;
     document.getElementById(`slot${index + 1}`).textContent = unsur;
+
+    disableUnsur(unsur); // 🔥 fitur baru
   }
 }
+
 document.getElementById("campurBtn").addEventListener("click", () => {
   periksaReaksi(slots);
 
@@ -120,7 +144,36 @@ document.getElementById("campurBtn").addEventListener("click", () => {
   for (let i = 1; i <= 3; i++) {
     document.getElementById(`slot${i}`).textContent = `Slot ${i}`;
   }
+  enableSemuaUnsur(); // 🔥 reset tombol unsur
 });
+
+document.getElementById("undoBtn").addEventListener("click", () => {
+  // cari slot terakhir yang terisi
+  let lastIndex = -1;
+  for (let i = slots.length - 1; i >= 0; i--) {
+    if (slots[i] !== "") {
+      lastIndex = i;
+      break;
+    }
+  }
+
+  if (lastIndex !== -1) {
+    const unsur = slots[lastIndex];
+    slots[lastIndex] = "";
+    document.getElementById(`slot${lastIndex + 1}`).textContent = `Slot ${lastIndex + 1}`;
+
+    // aktifkan kembali unsur
+    enableUnsur(unsur);
+  }
+});
+
+function enableUnsur(u) {
+  const el = document.querySelector(`[data-unsur='${u}']`);
+  el.classList.remove("disabled");
+  el.style.opacity = "1";
+  el.style.pointerEvents = "auto";
+}
+
 
 function periksaReaksi(selectedSlots) {
   const hasilDiv = document.getElementById("hasil");

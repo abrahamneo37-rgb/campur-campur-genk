@@ -77,6 +77,24 @@ body::before {
   font-weight: bold;
   background: radial-gradient(circle , #0b8797, #00acc3);
 }
+.undoBtn {
+  margin-top: 10px;
+  background: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #900000;
+}
+
+.undoBtn:hover {
+  background: #8b6bff;
+  box-shadow: 0 0 15px #8b6bff;
+}
+
 .funfact-card {
   display: none; /* awalnya tersembunyi */
   position: fixed;

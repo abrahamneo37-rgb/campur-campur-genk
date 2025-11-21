@@ -1,39 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campur-Campur Unsur</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>⚗️ Campur-Campur Unsur</h1>
-    <p>Pilih dua unsur lalu lihat hasil reaksinya!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campur-Campur Unsur</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚗️ Campur-Campur Unsur</h1>
+      <p>Pilih dua unsur lalu lihat hasil reaksinya!</p>
 
-    <div class="unsur-list">
-      <!-- Unsur akan dimuat lewat JavaScript -->
+      <div class="unsur-list">
+        <!-- Unsur akan dimuat lewat JavaScript -->
+      </div>
+
+      <div class="tabung-reaksi-container">
+        <div class="slot" id="slot1">Slot 1</div>
+        <div class="slot" id="slot2">Slot 2</div>
+        <div class="slot" id="slot3">Slot 3</div>
+        <button id="undoBtn" class="undoBtn">↩ Undo</button>
+      </div>
+
+      <button class="campurBtn" id="campurBtn">Campur Unsur</button>
+
+      <div class="hasil-reaksi" id="hasil"></div>
+      <button id="libraryBtn" onclick="window.location.href='library.html'">📚 Library</button>
+    </div>
+    <div id="funfactCard" class="funfact-card">
+      <span id="closeCard">&times;</span>
+      <img
+        id="funfactImg"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+        alt="Gambar Funfact" />
+      <p id="funfactText"></p>
     </div>
 
-    <div class="tabung-reaksi-container">
-  <div class="slot" id="slot1">Slot 1</div>
-  <div class="slot" id="slot2">Slot 2</div>
-  <div class="slot" id="slot3">Slot 3</div>
-</div>
-
-<button class="campurBtn" id="campurBtn">Campur Unsur</button>
-
-<div class="hasil-reaksi" id="hasil"></div>
-<button id="libraryBtn" onclick="window.location.href='library.html'">📚 Library</button>
-
-
-  </div>
-<div id="funfactCard" class="funfact-card">
-  <span id="closeCard">&times;</span>
-  <img id="funfactImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Gambar Funfact">
-  <p id="funfactText"></p>
-</div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
